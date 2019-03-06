@@ -20,9 +20,9 @@ class project:
 
         #Load additional files to memory
         #Floorplans:
-        self.fpBitmap={}
+        self.fpImage={}
         for fp in self.jsonFloorPlans["floorPlans"]:
-            self.fpBitmap[fp["id"]] = fp["imageId"]
+            self.fpImage[fp["id"]] = self.zip_ref.read('image-'+fp["imageId"])
 
 '''
 #SCHEMA DOCUMENTATION
